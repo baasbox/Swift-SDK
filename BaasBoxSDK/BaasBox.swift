@@ -47,6 +47,9 @@ public class BaasBox {
     private var appcode : String?
     private var config : BaasConfig!
     
+    private var version = "v1.0"
+    
+    
     private init() {}
 
     // MARK : Setters and Getters
@@ -691,6 +694,7 @@ public class BaasBox {
         h["cache-control"] = "no-cache"
         h["Content-Type"] = contType
         h["x-baasbox-appcode"] = self.appcode
+        h["User-Agent"] = "BaasBox Swift SDK - "+self.version
         if self.user.isAuthenticated() {
             h["x-bb-session"] = self.user.token
         }
