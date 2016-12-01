@@ -1,0 +1,3123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BaasBox Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/BaasBox" class="dashAnchor"></a>
+    <a title="BaasBox Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        BaasBox Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/BaasBox.html">BaasBox</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BaasBox/socialTypes.html">– socialTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BaasBox/docAccessTypes.html">– docAccessTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BaasBox/pushProfiles.html">– pushProfiles</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:C6BB_SDK10BaasConfig">BaasConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BaasUser.html">BaasUser</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/BaasLoginStrategy.html">BaasLoginStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/BaasLogoutStrategy.html">BaasLogoutStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/BaasSignupStrategy.html">BaasSignupStrategy</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>BaasBox</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">BaasBox</span></code></pre>
+
+                </div>
+              </div>
+            <p>The <code>BaasBox</code> class.
+usage is as follows:</p>
+
+<p>In your app delegate you should setup Baasbox</p>
+
+<pre class="highlight plaintext"><code>let config = BaasConfig()
+</code></pre>
+
+<p>Here you can declare some variables, See <code><a href="../Classes.html#/s:C6BB_SDK10BaasConfig">BaasConfig</a></code> for more data</p>
+
+<pre class="highlight plaintext"><code>BaasBox.setup(url: "your url", appcode: "your appcode", config: config)
+</code></pre>
+
+<p>Now you are ready to user BaasBox</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC6BB_SDK7BaasBox5setupFT3urlSS7appcodeSS6configCS_10BaasConfig_T_"></a>
+                    <a name="//apple_ref/swift/Method/setup(url:appcode:config:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC6BB_SDK7BaasBox5setupFT3urlSS7appcodeSS6configCS_10BaasConfig_T_">setup(url:appcode:config:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Baasbox setup, call this function in your AppDelegate.</p>
+
+<p><a href='#baasconfig-object' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='baasconfig-object'>BaasConfig Object:</h1></p>
+
+<ul>
+<li>timeout: Double</li>
+<li>retrylogin: Boolean that indicates if the SDK should save the user password encrypted and use it when server returns 401</li>
+<li>loginStrategy: A login strategy ( user defined functions for login ), if empty the default one will be used</li>
+<li>signupStrategy: A signup strategy ( user defined functions for signup ), if empty the default one will be used</li>
+<li><p>logoutStrategy: A logout strategy ( user defined functions for logout: called on logout or on user not authorized ), if empty the default one will be used</p></li>
+<li><p>parameters:</p>
+
+<ul>
+<li>url: BaasBox url</li>
+<li>appcode: BaasBox Appcode</li>
+<li>config : a BaasConfig Object</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">setup</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">appcode</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">config</span><span class="p">:</span> <span class="kt"><a href="../Classes.html#/s:C6BB_SDK10BaasConfig">BaasConfig</a></span> <span class="o">=</span> <span class="kt"><a href="../Classes.html#/s:C6BB_SDK10BaasConfig">BaasConfig</a></span><span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>BaasBox url</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>appcode</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>BaasBox Appcode</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>config</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a BaasConfig Object</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC6BB_SDK7BaasBox10getAppcodeFT_GSqSS_"></a>
+                    <a name="//apple_ref/swift/Method/getAppcode()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC6BB_SDK7BaasBox10getAppcodeFT_GSqSS_">getAppcode()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the appcode declared in setup.</p>
+
+<ul>
+<li>return : appcode from setup</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">getAppcode</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC6BB_SDK7BaasBox10getBaseUrlFT_GSqSS_"></a>
+                    <a name="//apple_ref/swift/Method/getBaseUrl()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC6BB_SDK7BaasBox10getBaseUrlFT_GSqSS_">getBaseUrl()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the url declared in setup.</p>
+
+<ul>
+<li>return : url from setup</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">getBaseUrl</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC6BB_SDK7BaasBox9getConfigFT_CS_10BaasConfig"></a>
+                    <a name="//apple_ref/swift/Method/getConfig()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC6BB_SDK7BaasBox9getConfigFT_CS_10BaasConfig">getConfig()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the config declared in setup.</p>
+
+<ul>
+<li>return : A BaasConfig object</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">getConfig</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes.html#/s:C6BB_SDK10BaasConfig">BaasConfig</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/User%20Management"></a>
+                <a name="//apple_ref/swift/Section/User Management" class="dashAnchor"></a>
+                <a href="#/User%20Management">
+                  <h3 class="section-name">User Management</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox5loginFT8usernameSS8passwordSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/login(username:password:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox5loginFT8usernameSS8passwordSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_">login(username:password:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Login the user specified in the parameters</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>username: The username of the user you want to login</li>
+<li>password: The password of the user you want to login</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">login</span><span class="p">(</span><span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span> <span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>username</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The username of the user you want to login</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>password</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The password of the user you want to login</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox11socialLoginFT2toOS0_11socialTypes5tokenSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/socialLogin(to:token:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox11socialLoginFT2toOS0_11socialTypes5tokenSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_">socialLogin(to:token:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Login the user specified in the parameters with the specified social platform</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>to: The platform you want to login ( .facebook, .google )</li>
+<li>token: The token that will be used for the login, you can get it via the third party sdks</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">socialLogin</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="n"><a href="../Classes/BaasBox/socialTypes.html">socialTypes</a></span><span class="p">,</span> <span class="nv">token</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span> <span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>to</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The platform you want to login ( .facebook, .google )</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>token</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The token that will be used for the login, you can get it via the third party sdks</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox10createUserFT8usernameSS8passwordSS16visibleByTheUserGVs10DictionarySSP__16visibleByFriendsGS1_SSP__24visibleByRegisteredUsersGS1_SSP__23visibleByAnonymousUsersGS1_SSP__10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/createUser(username:password:visibleByTheUser:visibleByFriends:visibleByRegisteredUsers:visibleByAnonymousUsers:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox10createUserFT8usernameSS8passwordSS16visibleByTheUserGVs10DictionarySSP__16visibleByFriendsGS1_SSP__24visibleByRegisteredUsersGS1_SSP__23visibleByAnonymousUsersGS1_SSP__10completionGSQFTSbGSqP__GSqPs5Error___T___T_">createUser(username:password:visibleByTheUser:visibleByFriends:visibleByRegisteredUsers:visibleByAnonymousUsers:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a user with the specified data</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>username: The username that will be used for the user</li>
+<li>password: The password that will be used for the user</li>
+<li>visibleByTheUser: (Optional) Dictionary that will be visible only by yourself</li>
+<li>visibleByFriends: (Optional) Dictionary that will be visible only by friends</li>
+<li>visibleByRegisteredUsers: (Optional) Dictionary that will be visible for any registered user</li>
+<li>visibleByAnonymousUsers: (Optional) Dictionary that will be visible for any user</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createUser</span><span class="p">(</span><span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">visibleByTheUser</span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:],</span> <span class="nv">visibleByFriends</span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:],</span> <span class="nv">visibleByRegisteredUsers</span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:],</span> <span class="nv">visibleByAnonymousUsers</span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span> <span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>username</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The username that will be used for the user</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>password</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The password that will be used for the user</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>visibleByTheUser</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>(Optional) Dictionary that will be visible only by yourself</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>visibleByFriends</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>(Optional) Dictionary that will be visible only by friends</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>visibleByRegisteredUsers</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>(Optional) Dictionary that will be visible for any registered user</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>visibleByAnonymousUsers</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>(Optional) Dictionary that will be visible for any user</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox7getUserFT8usernameSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/getUser(username:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox7getUserFT8usernameSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_">getUser(username:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the details of a specified user</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>username: the username to fetch</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getUser</span><span class="p">(</span><span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span> <span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>username</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the username to fetch</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox11getUserListFT10parametersGVs10DictionarySSVs11AnyHashable_10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/getUserList(parameters:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox11getUserListFT10parametersGVs10DictionarySSVs11AnyHashable_10completionGSQFTSbGSqP__GSqPs5Error___T___T_">getUserList(parameters:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get a list of users</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>parameters: Dictionary of query criteria</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getUserList</span><span class="p">(</span><span class="nv">parameters</span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span><span class="kt">AnyHashable</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Dictionary of query criteria</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox13resetPasswordFT8usernameSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/resetPassword(username:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox13resetPasswordFT8usernameSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_">resetPassword(username:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Try reset password of the specified user</p>
+
+<p><a href='#note' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='note'>Note</h1></p>
+
+<p>The user need to have the <q>email</q> field in the visibleByTheUser dictionary</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>username: the username to try reset</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">resetPassword</span><span class="p">(</span><span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>username</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the username to try reset</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC6BB_SDK7BaasBox15saveCurrentUserFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/saveCurrentUser()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC6BB_SDK7BaasBox15saveCurrentUserFT_T_">saveCurrentUser()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Saves the current stored user</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">saveCurrentUser</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC6BB_SDK7BaasBox17deleteCurrentUserFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/deleteCurrentUser()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC6BB_SDK7BaasBox17deleteCurrentUserFT_T_">deleteCurrentUser()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Remove the current stored user</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">deleteCurrentUser</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC6BB_SDK7BaasBox12saveUserPassFT4passSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/saveUserPass(pass:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC6BB_SDK7BaasBox12saveUserPassFT4passSS_T_">saveUserPass(pass:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Saves the current stored user pass encrypted</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">saveUserPass</span><span class="p">(</span><span class="nv">pass</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Follow"></a>
+                <a name="//apple_ref/swift/Section/Follow" class="dashAnchor"></a>
+                <a href="#/Follow">
+                  <h3 class="section-name">Follow</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox10getFollowsFT8usernameSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/getFollows(username:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox10getFollowsFT8usernameSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_">getFollows(username:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the follows of a specified user</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>username: the username to fetch</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getFollows</span><span class="p">(</span><span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>username</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the username to fetch</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox12getFollowersFT8usernameSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/getFollowers(username:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox12getFollowersFT8usernameSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_">getFollowers(username:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the followers of a specified user</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>username: the username to fetch</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getFollowers</span><span class="p">(</span><span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>username</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the username to fetch</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Documents"></a>
+                <a name="//apple_ref/swift/Section/Documents" class="dashAnchor"></a>
+                <a href="#/Documents">
+                  <h3 class="section-name">Documents</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox14createDocumentFT12inCollectionSS4bodyGVs10DictionarySSP__10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/createDocument(inCollection:body:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox14createDocumentFT12inCollectionSS4bodyGVs10DictionarySSP__10completionGSQFTSbGSqP__GSqPs5Error___T___T_">createDocument(inCollection:body:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a document on the specified collection</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>inCollection: The collection where you want to create the document</li>
+<li>body: Body of the document</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createDocument</span><span class="p">(</span><span class="n">inCollection</span> <span class="nv">coll</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span> <span class="nv">body</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inCollection</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The collection where you want to create the document</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>body</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Body of the document</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox14deleteDocumentFT14fromCollectionSS2idSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/deleteDocument(fromCollection:id:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox14deleteDocumentFT14fromCollectionSS2idSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_">deleteDocument(fromCollection:id:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>delete a document on the specified collection</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>fromCollection: The collection where you want to delete the document</li>
+<li>id: id of the document</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteDocument</span><span class="p">(</span><span class="n">fromCollection</span> <span class="nv">coll</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span><span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fromCollection</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The collection where you want to delete the document</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>id</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>id of the document</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox12getDocumentsFT14fromCollectionSS6withIDSS10parametersGVs10DictionarySSVs11AnyHashable_10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/getDocuments(fromCollection:withID:parameters:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox12getDocumentsFT14fromCollectionSS6withIDSS10parametersGVs10DictionarySSVs11AnyHashable_10completionGSQFTSbGSqP__GSqPs5Error___T___T_">getDocuments(fromCollection:withID:parameters:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get a document/ a list of documents from the specified collection, you can pass query and pagination criteria</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>fromCollection: The collection where you want to retrieve the document</li>
+<li>withID: (Optional) the id of the document</li>
+<li>parameters: (Optional) query criteria</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getDocuments</span><span class="p">(</span><span class="n">fromCollection</span> <span class="nv">coll</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">withID</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">AnyHashable</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fromCollection</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The collection where you want to retrieve the document</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>(Optional) the id of the document</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>(Optional) query criteria</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox14countDocumentsFT12inCollectionSS10parametersGVs10DictionarySSVs11AnyHashable_10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/countDocuments(inCollection:parameters:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox14countDocumentsFT12inCollectionSS10parametersGVs10DictionarySSVs11AnyHashable_10completionGSQFTSbGSqP__GSqPs5Error___T___T_">countDocuments(inCollection:parameters:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the number of documents from the specified collection, you can pass query and pagination criteria</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>inCollection: The collection where you want to count the documents</li>
+<li>parameters: (Optional) query criteria</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">countDocuments</span><span class="p">(</span><span class="n">inCollection</span> <span class="nv">coll</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span><span class="kt">AnyHashable</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inCollection</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The collection where you want to count the documents</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>(Optional) query criteria</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox14updateDocumentFT12inCollectionSS6withIDSS4bodyGVs10DictionarySSP__10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/updateDocument(inCollection:withID:body:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox14updateDocumentFT12inCollectionSS6withIDSS4bodyGVs10DictionarySSP__10completionGSQFTSbGSqP__GSqPs5Error___T___T_">updateDocument(inCollection:withID:body:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>update a document from the specified collection</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>inCollection: The collection where you want to update the document</li>
+<li>withID: the id of the document</li>
+<li>body: (Optional) : new body of the document</li>
+</ul></li>
+</ul>
+
+<p><a href='#note' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='note'>NOTE</h1></p>
+
+<p>The whole document will be overwrited</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">updateDocument</span><span class="p">(</span><span class="n">inCollection</span> <span class="nv">coll</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">withID</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">body</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inCollection</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The collection where you want to update the document</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the id of the document</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>body</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>(Optional) : new body of the document</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox15grantUserAccessFT10toDocumentSS12inCollectionSS6toUserSS10accessTypeOS0_14docAccessTypes10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/grantUserAccess(toDocument:inCollection:toUser:accessType:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox15grantUserAccessFT10toDocumentSS12inCollectionSS6toUserSS10accessTypeOS0_14docAccessTypes10completionGSQFTSbGSqP__GSqPs5Error___T___T_">grantUserAccess(toDocument:inCollection:toUser:accessType:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Grant access to the specified user to the specified document</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>toDocument: Id of the document</li>
+<li>inCollection: Name of the collection</li>
+<li>toUser: Username of the user</li>
+<li>accessType: enumeration of types of access ( read, delete, all, update )</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">grantUserAccess</span><span class="p">(</span><span class="n">toDocument</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">inCollection</span> <span class="nv">coll</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">toUser</span> <span class="nv">user</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">accessType</span><span class="p">:</span> <span class="n"><a href="../Classes/BaasBox/docAccessTypes.html">docAccessTypes</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Id of the document</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inCollection</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Name of the collection</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toUser</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Username of the user</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accessType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>enumeration of types of access ( read, delete, all, update )</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox15grantRoleAccessFT10toDocumentSS12inCollectionSS6toRoleSS10accessTypeOS0_14docAccessTypes10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/grantRoleAccess(toDocument:inCollection:toRole:accessType:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox15grantRoleAccessFT10toDocumentSS12inCollectionSS6toRoleSS10accessTypeOS0_14docAccessTypes10completionGSQFTSbGSqP__GSqPs5Error___T___T_">grantRoleAccess(toDocument:inCollection:toRole:accessType:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Grant access to the specified role to the specified document</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>toDocument: Id of the document</li>
+<li>inCollection: Name of the collection</li>
+<li>toRole: name of the role</li>
+<li>accessType: enumeration of types of access ( read, delete, all, update )</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">grantRoleAccess</span><span class="p">(</span><span class="n">toDocument</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">inCollection</span> <span class="nv">coll</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">toRole</span> <span class="nv">roleid</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">accessType</span><span class="p">:</span> <span class="n"><a href="../Classes/BaasBox/docAccessTypes.html">docAccessTypes</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Id of the document</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inCollection</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Name of the collection</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toRole</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>name of the role</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accessType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>enumeration of types of access ( read, delete, all, update )</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox16revokeUserAccessFT10toDocumentSS12inCollectionSS6toUserSS10accessTypeOS0_14docAccessTypes10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/revokeUserAccess(toDocument:inCollection:toUser:accessType:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox16revokeUserAccessFT10toDocumentSS12inCollectionSS6toUserSS10accessTypeOS0_14docAccessTypes10completionGSQFTSbGSqP__GSqPs5Error___T___T_">revokeUserAccess(toDocument:inCollection:toUser:accessType:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Revoke access to the specified user to the specified document</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>toDocument: Id of the document</li>
+<li>inCollection: Name of the collection</li>
+<li>toUser: Username of the user</li>
+<li>accessType: enumeration of types of access ( read, delete, all, update )</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">revokeUserAccess</span><span class="p">(</span><span class="n">toDocument</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">inCollection</span> <span class="nv">coll</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">toUser</span> <span class="nv">user</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">accessType</span><span class="p">:</span> <span class="n"><a href="../Classes/BaasBox/docAccessTypes.html">docAccessTypes</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Id of the document</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inCollection</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Name of the collection</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toUser</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Username of the user</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accessType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>enumeration of types of access ( read, delete, all, update )</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox16revokeRoleAccessFT10toDocumentSS12inCollectionSS6toRoleSS10accessTypeOS0_14docAccessTypes10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/revokeRoleAccess(toDocument:inCollection:toRole:accessType:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox16revokeRoleAccessFT10toDocumentSS12inCollectionSS6toRoleSS10accessTypeOS0_14docAccessTypes10completionGSQFTSbGSqP__GSqPs5Error___T___T_">revokeRoleAccess(toDocument:inCollection:toRole:accessType:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Revoke access to the specified role to the specified document</p>
+
+<ul>
+<li>parameters:</li>
+<li>toDocument: Id of the document</li>
+<li>inCollection: Name of the collection</li>
+<li>toRole: name of the role</li>
+<li>accessType: enumeration of types of access ( read, delete, all, update )</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">revokeRoleAccess</span><span class="p">(</span><span class="n">toDocument</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">inCollection</span> <span class="nv">coll</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">toRole</span> <span class="nv">roleid</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">accessType</span><span class="p">:</span> <span class="n"><a href="../Classes/BaasBox/docAccessTypes.html">docAccessTypes</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Links"></a>
+                <a name="//apple_ref/swift/Section/Links" class="dashAnchor"></a>
+                <a href="#/Links">
+                  <h3 class="section-name">Links</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox10createLinkFT5labelSS8sourceIDSS13destinationIDSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/createLink(label:sourceID:destinationID:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox10createLinkFT5labelSS8sourceIDSS13destinationIDSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_">createLink(label:sourceID:destinationID:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a link within two documents with a label</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>label: Label of the link</li>
+<li>sourceID: Id of the first document</li>
+<li>destinationID: Id of the second document</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createLink</span><span class="p">(</span><span class="nv">label</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">sourceID</span> <span class="nv">source</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">destinationID</span> <span class="nv">dest</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>label</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Label of the link</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sourceID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Id of the first document</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>destinationID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Id of the second document</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox8getLinksFT6withIDSS10parametersGVs10DictionarySSVs11AnyHashable_10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/getLinks(withID:parameters:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox8getLinksFT6withIDSS10parametersGVs10DictionarySSVs11AnyHashable_10completionGSQFTSbGSqP__GSqPs5Error___T___T_">getLinks(withID:parameters:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get list of linked documents, you can pass query and pagination criteria</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>withID: (Optional) The id of the link you want to retrieve</li>
+<li>parameters: (Optional) query criteria</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getLinks</span><span class="p">(</span><span class="n">withID</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span><span class="kt">AnyHashable</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>(Optional) The id of the link you want to retrieve</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>(Optional) query criteria</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox10deleteLinkFT6withIDSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/deleteLink(withID:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox10deleteLinkFT6withIDSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_">deleteLink(withID:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Delete the link with the provided id</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>withID: The id of the link you want to delete</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteLink</span><span class="p">(</span><span class="n">withID</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The id of the link you want to delete</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Files"></a>
+                <a name="//apple_ref/swift/Section/Files" class="dashAnchor"></a>
+                <a href="#/Files">
+                  <h3 class="section-name">Files</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox10uploadFileFT4dataV10Foundation4Data12attachedDataGVs10DictionarySSVs11AnyHashable_11permissionsGS3_SSS4__10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/uploadFile(data:attachedData:permissions:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox10uploadFileFT4dataV10Foundation4Data12attachedDataGVs10DictionarySSVs11AnyHashable_11permissionsGS3_SSS4__10completionGSQFTSbGSqP__GSqPs5Error___T___T_">uploadFile(data:attachedData:permissions:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Upload the file given as data</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>data: data of the file you want to upload</li>
+<li>attachedData : More data you want to store</li>
+<li>permissions : The permissions of the file uploaded ( see ACL )</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">uploadFile</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">attachedData</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span><span class="kt">AnyHashable</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:],</span> <span class="nv">permissions</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span><span class="kt">AnyHashable</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>data of the file you want to upload</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>attachedData</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>More data you want to store</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>permissions</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The permissions of the file uploaded ( see ACL )</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox10deleteFileFT6withIDSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/deleteFile(withID:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox10deleteFileFT6withIDSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_">deleteFile(withID:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Delete the file with the provided id</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>withID: id of the file to delete</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteFile</span><span class="p">(</span><span class="n">withID</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>id of the file to delete</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox7getFileFT6withIDSS10completionGSQFTSbGSqV10Foundation4Data_GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/getFile(withID:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox7getFileFT6withIDSS10completionGSQFTSbGSqV10Foundation4Data_GSqPs5Error___T___T_">getFile(withID:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the file with the provided id</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>withID: id of the file to get</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getFile</span><span class="p">(</span><span class="n">withID</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasFileCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>id of the file to get</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox14getFileDetailsFT6withIDSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/getFileDetails(withID:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox14getFileDetailsFT6withIDSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_">getFileDetails(withID:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the file details with the provided id</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>withID: id of the file to get</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getFileDetails</span><span class="p">(</span><span class="n">withID</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>id of the file to get</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox15getFilesDetailsFT10parametersGVs10DictionarySSVs11AnyHashable_10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/getFilesDetails(parameters:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox15getFilesDetailsFT10parametersGVs10DictionarySSVs11AnyHashable_10completionGSQFTSbGSqP__GSqPs5Error___T___T_">getFilesDetails(parameters:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get a list of file details, you can pass query criteria</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>parameters: Query criteria</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getFilesDetails</span><span class="p">(</span><span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">AnyHashable</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Query criteria</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox15grantUserAccessFT6toFileSS6toUserSS10accessTypeOS0_14docAccessTypes10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/grantUserAccess(toFile:toUser:accessType:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox15grantUserAccessFT6toFileSS6toUserSS10accessTypeOS0_14docAccessTypes10completionGSQFTSbGSqP__GSqPs5Error___T___T_">grantUserAccess(toFile:toUser:accessType:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Grant access to the specified user to the specified file</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>toFile: Id of the document</li>
+<li>inCollection: Name of the collection</li>
+<li>toUser: Username of the user</li>
+<li>accessType: enumeration of types of access ( read, delete, all, update )</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">grantUserAccess</span><span class="p">(</span><span class="n">toFile</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">toUser</span> <span class="nv">userid</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">accessType</span><span class="p">:</span> <span class="n"><a href="../Classes/BaasBox/docAccessTypes.html">docAccessTypes</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toFile</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Id of the document</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inCollection</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Name of the collection</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toUser</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Username of the user</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accessType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>enumeration of types of access ( read, delete, all, update )</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox15grantRoleAccessFT6toFileSS6toRoleSS10accessTypeOS0_14docAccessTypes10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/grantRoleAccess(toFile:toRole:accessType:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox15grantRoleAccessFT6toFileSS6toRoleSS10accessTypeOS0_14docAccessTypes10completionGSQFTSbGSqP__GSqPs5Error___T___T_">grantRoleAccess(toFile:toRole:accessType:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Grant access to the specified role to the specified file</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>toFile: Id of the document</li>
+<li>inCollection: Name of the collection</li>
+<li>toRole: name of the role</li>
+<li>accessType: enumeration of types of access ( read, delete, all, update )</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">grantRoleAccess</span><span class="p">(</span><span class="n">toFile</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">toRole</span> <span class="nv">roleid</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">accessType</span><span class="p">:</span> <span class="n"><a href="../Classes/BaasBox/docAccessTypes.html">docAccessTypes</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toFile</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Id of the document</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inCollection</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Name of the collection</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toRole</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>name of the role</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accessType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>enumeration of types of access ( read, delete, all, update )</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox16revokeUserAccessFT6toFileSS6toUserSS10accessTypeOS0_14docAccessTypes10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/revokeUserAccess(toFile:toUser:accessType:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox16revokeUserAccessFT6toFileSS6toUserSS10accessTypeOS0_14docAccessTypes10completionGSQFTSbGSqP__GSqPs5Error___T___T_">revokeUserAccess(toFile:toUser:accessType:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Revoke access to the specified user to the specified file</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>toFile: Id of the document</li>
+<li>inCollection: Name of the collection</li>
+<li>toUser: Username of the user</li>
+<li>accessType: enumeration of types of access ( read, delete, all, update )</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">revokeUserAccess</span><span class="p">(</span><span class="n">toFile</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">toUser</span> <span class="nv">userid</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">accessType</span><span class="p">:</span> <span class="n"><a href="../Classes/BaasBox/docAccessTypes.html">docAccessTypes</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toFile</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Id of the document</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inCollection</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Name of the collection</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toUser</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Username of the user</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accessType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>enumeration of types of access ( read, delete, all, update )</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox16revokeRoleAccessFT6toFileSS6toRoleSS10accessTypeOS0_14docAccessTypes10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/revokeRoleAccess(toFile:toRole:accessType:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox16revokeRoleAccessFT6toFileSS6toRoleSS10accessTypeOS0_14docAccessTypes10completionGSQFTSbGSqP__GSqPs5Error___T___T_">revokeRoleAccess(toFile:toRole:accessType:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Revoke access to the specified role to the specified file</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>toFile: Id of the document</li>
+<li>inCollection: Name of the collection</li>
+<li>toRole: name of the role</li>
+<li>accessType: enumeration of types of access ( read, delete, all, update )</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">revokeRoleAccess</span><span class="p">(</span><span class="n">toFile</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">toRole</span> <span class="nv">roleid</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">accessType</span><span class="p">:</span> <span class="n"><a href="../Classes/BaasBox/docAccessTypes.html">docAccessTypes</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toFile</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Id of the document</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inCollection</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Name of the collection</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toRole</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>name of the role</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accessType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>enumeration of types of access ( read, delete, all, update )</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Assets"></a>
+                <a name="//apple_ref/swift/Section/Assets" class="dashAnchor"></a>
+                <a href="#/Assets">
+                  <h3 class="section-name">Assets</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox8getAssetFT4nameSS10completionGSQFTSbGSqV10Foundation4Data_GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/getAsset(name:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox8getAssetFT4nameSS10completionGSQFTSbGSqV10Foundation4Data_GSqPs5Error___T___T_">getAsset(name:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieve the asset with the specified name</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>name: name of the asset</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getAsset</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasFileCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>name of the asset</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Push%20Notifications"></a>
+                <a name="//apple_ref/swift/Section/Push Notifications" class="dashAnchor"></a>
+                <a href="#/Push%20Notifications">
+                  <h3 class="section-name">Push Notifications</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox28askToEnablePushNotificationsFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/askToEnablePushNotifications()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox28askToEnablePushNotificationsFT_T_">askToEnablePushNotifications()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ask the user to enable push notification.
+You need to add to your AppDelegate:</p>
+
+<p>import UserNotification
+extension UNUserNotificationDelegate
+if #available(iOS 10.0, *){
+   UNUserNotificationCenter.current().delegate = self
+}</p>
+
+<p>for ios10</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">askToEnablePushNotifications</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox23enablePushNotificationsFT11deviceTokenV10Foundation4Data10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/enablePushNotifications(deviceToken:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox23enablePushNotificationsFT11deviceTokenV10Foundation4Data10completionGSQFTSbGSqP__GSqPs5Error___T___T_">enablePushNotifications(deviceToken:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add this method in AppDelegate:</p>
+
+<p>didRegisterForRemoteNotificationsWithDeviceToken</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">enablePushNotifications</span><span class="p">(</span><span class="nv">deviceToken</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox16sendNotificationFT7messageSS5usersGSaSS_8profilesGSaOS0_12pushProfiles_5soundSS5badgeSi18actionLocalizedKeySS12localizedKeySS18localizedArgumentsGSaSS_6customGVs10DictionarySSVs11AnyHashable_12collapse_keySS12time_to_liveSi17content_availableSi8categorySS10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/sendNotification(message:users:profiles:sound:badge:actionLocalizedKey:localizedKey:localizedArguments:custom:collapse_key:time_to_live:content_available:category:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox16sendNotificationFT7messageSS5usersGSaSS_8profilesGSaOS0_12pushProfiles_5soundSS5badgeSi18actionLocalizedKeySS12localizedKeySS18localizedArgumentsGSaSS_6customGVs10DictionarySSVs11AnyHashable_12collapse_keySS12time_to_liveSi17content_availableSi8categorySS10completionGSQFTSbGSqP__GSqPs5Error___T___T_">sendNotification(message:users:profiles:sound:badge:actionLocalizedKey:localizedKey:localizedArguments:custom:collapse_key:time_to_live:content_available:category:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sends a push notification to the specified users</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendNotification</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">users</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">],</span> <span class="nv">profiles</span><span class="p">:</span> <span class="p">[</span><span class="n"><a href="../Classes/BaasBox/pushProfiles.html">pushProfiles</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="n">one</span><span class="p">],</span> <span class="nv">sound</span><span class="p">:</span><span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span> <span class="nv">badge</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">actionLocalizedKey</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span> <span class="nv">localizedKey</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span> <span class="nv">localizedArguments</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span> <span class="nv">custom</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">AnyHashable</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:],</span> <span class="nv">collapse_key</span><span class="p">:</span><span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span> <span class="nv">time_to_live</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">2419200</span><span class="p">,</span> <span class="nv">content_available</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">category</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span><span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Pass%20Through"></a>
+                <a name="//apple_ref/swift/Section/Pass Through" class="dashAnchor"></a>
+                <a href="#/Pass%20Through">
+                  <h3 class="section-name">Pass Through</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox3getFT3urlSS10parametersGVs10DictionarySSVs11AnyHashable_10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/get(url:parameters:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox3getFT3urlSS10parametersGVs10DictionarySSVs11AnyHashable_10completionGSQFTSbGSqP__GSqPs5Error___T___T_">get(url:parameters:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>HTTP GET, you can use this to call plugins</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>url: the endpoint to call ( note: without the base url ) eg: /plugins/baasbox.plugin</li>
+<li>parameters: list of parameters for the query</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">get</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:[</span><span class="kt">String</span><span class="p">:</span><span class="kt">AnyHashable</span><span class="p">],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the endpoint to call ( note: without the base url ) eg: /plugins/baasbox.plugin</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>list of parameters for the query</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox4postFT3urlSS10parametersGVs10DictionarySSP__10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/post(url:parameters:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox4postFT3urlSS10parametersGVs10DictionarySSP__10completionGSQFTSbGSqP__GSqPs5Error___T___T_">post(url:parameters:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>HTTP POST, you can use this to call plugins</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>url: the endpoint to call ( note: without the base url ) eg: /plugins/baasbox.plugin</li>
+<li>parameters: list of parameters for the query</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">post</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:[</span><span class="kt">String</span><span class="p">:</span><span class="kt">Any</span><span class="p">],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the endpoint to call ( note: without the base url ) eg: /plugins/baasbox.plugin</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>list of parameters for the query</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox3putFT3urlSS10parametersGVs10DictionarySSP__10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/put(url:parameters:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox3putFT3urlSS10parametersGVs10DictionarySSP__10completionGSQFTSbGSqP__GSqPs5Error___T___T_">put(url:parameters:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>HTTP PUT, you can use this to call plugins</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>url: the endpoint to call ( note: without the base url ) eg: /plugins/baasbox.plugin</li>
+<li>parameters: list of parameters for the query</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">put</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:[</span><span class="kt">String</span><span class="p">:</span><span class="kt">Any</span><span class="p">],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the endpoint to call ( note: without the base url ) eg: /plugins/baasbox.plugin</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>list of parameters for the query</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK7BaasBox6deleteFT3urlSS10parametersGVs10DictionarySSP__10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/delete(url:parameters:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK7BaasBox6deleteFT3urlSS10parametersGVs10DictionarySSP__10completionGSQFTSbGSqP__GSqPs5Error___T___T_">delete(url:parameters:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>HTTP DELETE, you can use this to call plugins</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>url: the endpoint to call ( note: without the base url ) eg: /plugins/baasbox.plugin</li>
+<li>parameters: list of parameters for the query</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">delete</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:[</span><span class="kt">String</span><span class="p">:</span><span class="kt">Any</span><span class="p">],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the endpoint to call ( note: without the base url ) eg: /plugins/baasbox.plugin</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>list of parameters for the query</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Enums"></a>
+                <a name="//apple_ref/swift/Section/Enums" class="dashAnchor"></a>
+                <a href="#/Enums">
+                  <h3 class="section-name">Enums</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:OC6BB_SDK7BaasBox11socialTypes"></a>
+                    <a name="//apple_ref/swift/Enum/socialTypes" class="dashAnchor"></a>
+                    <a class="token" href="#/s:OC6BB_SDK7BaasBox11socialTypes">socialTypes</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enum the possible social logins offered by BaasBox</p>
+
+                        <a href="../Classes/BaasBox/socialTypes.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="nv">socialTypes</span> <span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:OC6BB_SDK7BaasBox14docAccessTypes"></a>
+                    <a name="//apple_ref/swift/Enum/docAccessTypes" class="dashAnchor"></a>
+                    <a class="token" href="#/s:OC6BB_SDK7BaasBox14docAccessTypes">docAccessTypes</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enum the possible access types for documents and files</p>
+
+                        <a href="../Classes/BaasBox/docAccessTypes.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="nv">docAccessTypes</span> <span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:OC6BB_SDK7BaasBox12pushProfiles"></a>
+                    <a name="//apple_ref/swift/Enum/pushProfiles" class="dashAnchor"></a>
+                    <a class="token" href="#/s:OC6BB_SDK7BaasBox12pushProfiles">pushProfiles</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enum the possible app profiles for push notifications</p>
+
+                        <a href="../Classes/BaasBox/pushProfiles.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="nv">pushProfiles</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>2016 CopyRight @ BaasBox s.r.l.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

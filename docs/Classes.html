@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Classes  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="Classes  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Classes  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/BaasBox.html">BaasBox</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BaasBox/socialTypes.html">– socialTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BaasBox/docAccessTypes.html">– docAccessTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BaasBox/pushProfiles.html">– pushProfiles</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes.html#/s:C6BB_SDK10BaasConfig">BaasConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BaasUser.html">BaasUser</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/BaasLoginStrategy.html">BaasLoginStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/BaasLogoutStrategy.html">BaasLogoutStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/BaasSignupStrategy.html">BaasSignupStrategy</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Classes</h1>
+            <p>The following classes are available globally.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C6BB_SDK10BaasConfig"></a>
+                    <a name="//apple_ref/swift/Class/BaasConfig" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C6BB_SDK10BaasConfig">BaasConfig</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>BaasConfig class, let you declare your <code><a href="Classes/BaasBox.html">BaasBox</a></code> Configs before setup</p>
+
+<p><a href='#baasconfig-object' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='baasconfig-object'>BaasConfig Object:</h1></p>
+
+<ul>
+<li>timeout: Double</li>
+<li>retrylogin: Boolean that indicates if the SDK should save the user password encrypted and use it when server returns 401</li>
+<li>loginStrategy: A login strategy see <code><a href="Protocols/BaasLoginStrategy.html">BaasLoginStrategy</a></code> ( user defined functions for login ), if empty the default one will be used</li>
+<li>signupStrategy: A signup strategy see <code><a href="Protocols/BaasSignupStrategy.html">BaasSignupStrategy</a></code> ( user defined functions for signup ), if empty the default one will be used</li>
+<li>logoutStrategy: A logout strategy see <code><a href="Protocols/BaasLogoutStrategy.html">BaasLogoutStrategy</a></code> ( user defined functions for logout: called on logout or on user not authorized ), if empty the default one will be used</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">BaasConfig</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C6BB_SDK8BaasUser"></a>
+                    <a name="//apple_ref/swift/Class/BaasUser" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C6BB_SDK8BaasUser">BaasUser</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>class BaasUser</p>
+
+<p>manages the <code><a href="Classes/BaasBox.html">BaasBox</a></code> logged in user</p>
+
+<p>You can get the user data and manages it from here</p>
+
+                        <a href="Classes/BaasUser.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">BaasUser</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">NSCoding</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C6BB_SDK7BaasBox"></a>
+                    <a name="//apple_ref/swift/Class/BaasBox" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C6BB_SDK7BaasBox">BaasBox</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code>BaasBox</code> class.
+usage is as follows:</p>
+
+<p>In your app delegate you should setup Baasbox</p>
+
+<pre class="highlight plaintext"><code>let config = BaasConfig()
+</code></pre>
+
+<p>Here you can declare some variables, See <code><a href="Classes.html#/s:C6BB_SDK10BaasConfig">BaasConfig</a></code> for more data</p>
+
+<pre class="highlight plaintext"><code>BaasBox.setup(url: "your url", appcode: "your appcode", config: config)
+</code></pre>
+
+<p>Now you are ready to user BaasBox</p>
+
+                        <a href="Classes/BaasBox.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">BaasBox</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>2016 CopyRight @ BaasBox s.r.l.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

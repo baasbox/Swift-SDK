@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BaasUser Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/BaasUser" class="dashAnchor"></a>
+    <a title="BaasUser Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        BaasUser Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/BaasBox.html">BaasBox</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BaasBox/socialTypes.html">– socialTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BaasBox/docAccessTypes.html">– docAccessTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BaasBox/pushProfiles.html">– pushProfiles</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:C6BB_SDK10BaasConfig">BaasConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BaasUser.html">BaasUser</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/BaasLoginStrategy.html">BaasLoginStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/BaasLogoutStrategy.html">BaasLogoutStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/BaasSignupStrategy.html">BaasSignupStrategy</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>BaasUser</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">BaasUser</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">NSCoding</span></code></pre>
+
+                </div>
+              </div>
+            <p>class BaasUser</p>
+
+<p>manages the <code><a href="../Classes/BaasBox.html">BaasBox</a></code> logged in user</p>
+
+<p>You can get the user data and manages it from here</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Variables"></a>
+                <a name="//apple_ref/swift/Section/Variables" class="dashAnchor"></a>
+                <a href="#/Variables">
+                  <h3 class="section-name">Variables</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK8BaasUsercFT5coderCSo7NSCoder_GSqS0__"></a>
+                    <a name="//apple_ref/swift/Method/init(coder:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK8BaasUsercFT5coderCSo7NSCoder_GSqS0__">init(coder:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Decodes the saved object</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">required</span> <span class="n">convenience</span> <span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="n">coder</span> <span class="nv">aDecoder</span><span class="p">:</span> <span class="kt">NSCoder</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK8BaasUser6encodeFT4withCSo7NSCoder_T_"></a>
+                    <a name="//apple_ref/swift/Method/encode(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK8BaasUser6encodeFT4withCSo7NSCoder_T_">encode(with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Encodes the saved object</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">encode</span><span class="p">(</span><span class="n">with</span> <span class="nv">aCoder</span><span class="p">:</span> <span class="kt">NSCoder</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK8BaasUser15isAuthenticatedFT_Sb"></a>
+                    <a name="//apple_ref/swift/Method/isAuthenticated()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK8BaasUser15isAuthenticatedFT_Sb">isAuthenticated()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a bool if the user is locally authenticated</p>
+
+<ul>
+<li>return: Boolean for local authentication</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isAuthenticated</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/User%20Management"></a>
+                <a name="//apple_ref/swift/Section/User Management" class="dashAnchor"></a>
+                <a href="#/User%20Management">
+                  <h3 class="section-name">User Management</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK8BaasUser6updateFT10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/update(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK8BaasUser6updateFT10completionGSQFTSbGSqP__GSqPs5Error___T___T_">update(completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Upload the saved user updates to the BaasBox server</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">update</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kt"><a href="../Classes/BaasBox.html">BaasBox</a></span><span class="o">.</span><span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK8BaasUser6logoutFT9pushTokenSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/logout(pushToken:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK8BaasUser6logoutFT9pushTokenSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_">logout(pushToken:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Logout function, will call the function you pass in logoutStrategy on completion</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">logout</span><span class="p">(</span><span class="nv">pushToken</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span><span class="nv">completion</span><span class="p">:</span> <span class="kt"><a href="../Classes/BaasBox.html">BaasBox</a></span><span class="o">.</span><span class="kt">BaasCompletion</span> <span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK8BaasUser7refreshFT10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/refresh(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK8BaasUser7refreshFT10completionGSQFTSbGSqP__GSqPs5Error___T___T_">refresh(completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Refresh the saved data of the user from the server</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">refresh</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kt"><a href="../Classes/BaasBox.html">BaasBox</a></span><span class="o">.</span><span class="kt">BaasCompletion</span> <span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK8BaasUser14changePasswordFT4fromSS2toSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/changePassword(from:to:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK8BaasUser14changePasswordFT4fromSS2toSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_">changePassword(from:to:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Change the user password.</p>
+
+<p><a href='#note' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='note'>NOTE:</h1></p>
+
+<p>Your session code will change</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>from : Old password</li>
+<li>to : New password</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">changePassword</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt"><a href="../Classes/BaasBox.html">BaasBox</a></span><span class="o">.</span><span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>from</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Old password</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>to</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>New password</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK8BaasUser4linkFT2toOCS_7BaasBox11socialTypes5tokenSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/link(to:token:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK8BaasUser4linkFT2toOCS_7BaasBox11socialTypes5tokenSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_">link(to:token:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Link the user with a social login</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>to: <code><a href="../Classes/BaasBox/socialTypes.html">BaasBox.socialTypes</a></code>, the type of the social login</li>
+<li>token: The token provided by the third party social sdk</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">link</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt"><a href="../Classes/BaasBox.html">BaasBox</a></span><span class="o">.</span><span class="n">socialTypes</span><span class="p">,</span> <span class="nv">token</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt"><a href="../Classes/BaasBox.html">BaasBox</a></span><span class="o">.</span><span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>to</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>BaasBox.socialTypes</code>, the type of the social login</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>token</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The token provided by the third party social sdk</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Follow"></a>
+                <a name="//apple_ref/swift/Section/Follow" class="dashAnchor"></a>
+                <a href="#/Follow">
+                  <h3 class="section-name">Follow</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK8BaasUser6followFT8usernameSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/follow(username:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK8BaasUser6followFT8usernameSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_">follow(username:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Follows a user</p>
+
+<ul>
+<li>parameters:
+-username: The username of the user to follow</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">follow</span><span class="p">(</span><span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt"><a href="../Classes/BaasBox.html">BaasBox</a></span><span class="o">.</span><span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK8BaasUser8unfollowFT8usernameSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/unfollow(username:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK8BaasUser8unfollowFT8usernameSS10completionGSQFTSbGSqP__GSqPs5Error___T___T_">unfollow(username:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Unfollows a user</p>
+
+<ul>
+<li>parameters:
+-username: The username of the user to unfollow</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">unfollow</span><span class="p">(</span><span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt"><a href="../Classes/BaasBox.html">BaasBox</a></span><span class="o">.</span><span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK8BaasUser10getFollowsFT10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/getFollows(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK8BaasUser10getFollowsFT10completionGSQFTSbGSqP__GSqPs5Error___T___T_">getFollows(completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the user follows</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getFollows</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kt"><a href="../Classes/BaasBox.html">BaasBox</a></span><span class="o">.</span><span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6BB_SDK8BaasUser12getFollowersFT10completionGSQFTSbGSqP__GSqPs5Error___T___T_"></a>
+                    <a name="//apple_ref/swift/Method/getFollowers(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6BB_SDK8BaasUser12getFollowersFT10completionGSQFTSbGSqP__GSqPs5Error___T___T_">getFollowers(completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the user followers</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getFollowers</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kt"><a href="../Classes/BaasBox.html">BaasBox</a></span><span class="o">.</span><span class="kt">BaasCompletion</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>2016 CopyRight @ BaasBox s.r.l.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
