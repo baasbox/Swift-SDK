@@ -4,7 +4,7 @@ iOS BaasBox SDK
 
 BaasBox iOS Swift 3 SDK.
 
-Documentation: [Docs](Link)
+Documentation: [Docs](http://baasbox.github.io/Swift-SDK/docs)
 
 #Installation
 
